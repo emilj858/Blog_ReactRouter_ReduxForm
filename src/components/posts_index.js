@@ -7,6 +7,7 @@ class PostsIndex extends Component {
     componentWillMount() {
         this.props.fetchPosts();
     }
+    
 renderPosts(){
     return this.props.posts.map((post) => {
         return (
@@ -35,9 +36,6 @@ renderPosts(){
         )
     }
 }
-// function mapDispatchToProps(dispatch){
-//     return bindActionCreators({fetchPosts}, dispatch)
-// }
 
 function mapStateToProps(state) {
     return {posts: state.posts.all}
